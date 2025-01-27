@@ -397,7 +397,7 @@ class ZigZagEnemy extends Phaser.Physics.Arcade.Sprite {
 
     async updatePattern() {
         this.setVelocityX(this.speed * this.direction);
-        this.setVelocityY(this.speed / 2);
+        this.setVelocityY(this.speed / 2 + (this.speed/9)*scoreMultiplier-1);
         if ((this.x <= 32 && this.direction == -1) || (this.x >= config.width - 32 && this.direction == 1)) {
             this.direction *= -1; // Cambiar de dirección si llega a los bordes
         }
@@ -426,7 +426,7 @@ class StraightEnemy extends Phaser.Physics.Arcade.Sprite {
 
     async updatePattern() {
         // Este enemigo solo se mueve hacia abajo
-        this.setVelocityY(this.speed / 2);
+        this.setVelocityY(this.speed / 2+ (this.speed/9)*scoreMultiplier-1);
         if (this.scene.time.now > this.lastFired + this.fireCooldown) {
             this.lastFired = this.scene.time.now; // Actualizar el tiempo
             disparo(this.scene, false, this.x, this.y);
@@ -471,7 +471,7 @@ class enemyPlasma extends Phaser.Physics.Arcade.Sprite {
     }
 
     async updatePattern() {
-        this.setVelocityY(this.speed);
+        this.setVelocityY(this.speed+ (this.speed/19)*scoreMultiplier-1);
         checkSalida(this);
     }
 }
