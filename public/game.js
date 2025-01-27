@@ -40,7 +40,7 @@ function preload() {
     this.load.image('proyectil', './assets/proyectiles/proyectil.png');
 
     // cargamos el sprite del personaje principal
-    this.load.spritesheet('phaser', './assets/player/CorbetaSprite.png', { frameWidth: 64, frameHeight: 64 }); // personaje principal
+    this.load.spritesheet('phaser', './assets//player/CorbetaSprite.png', { frameWidth: 64, frameHeight: 64 }); // personaje principal
 
     //explosiones
     this.load.spritesheet('explosion1', './assets/explosion1.png', { frameWidth: 64, frameHeight: 64 });
