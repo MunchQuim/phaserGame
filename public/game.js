@@ -25,26 +25,26 @@ let scoreMultiplier = 1;
 function preload() {
     //background
     //4 mas lejano
-    this.load.image('background4', '/assets/background/background4.png');
+    this.load.image('background4', './assets/background/background4.png');
     //3 con algo de movimiento
-    this.load.image('background3', '/assets/background/background3.png');
+    this.load.image('background3', './assets/background/background3.png');
     //2 movimiento lento
-    this.load.image('background2', '/assets/background/background2.png');
+    this.load.image('background2', './assets/background/background2.png');
     //1 movimiento
-    this.load.image('background1', '/assets/background/background1.png');
+    this.load.image('background1', './assets/background/background1.png');
 
     //cargamos el enemigo basico
-    this.load.spritesheet('enemy', '/assets/enemigos/enemigo1.png', { frameWidth: 64, frameHeight: 64 });
+    this.load.spritesheet('enemy', './assets/enemigos/enemigo1.png', { frameWidth: 64, frameHeight: 64 });
 
     //cargamos el proyectil
-    this.load.image('proyectil', '/assets/proyectiles/proyectil.png');
+    this.load.image('proyectil', './assets/proyectiles/proyectil.png');
 
     // cargamos el sprite del personaje principal
-    this.load.spritesheet('phaser', '/assets/main/CorbetaSprite.png', { frameWidth: 64, frameHeight: 64 }); // personaje principal
+    this.load.spritesheet('phaser', './assets/main/CorbetaSprite.png', { frameWidth: 64, frameHeight: 64 }); // personaje principal
 
     //explosiones
-    this.load.spritesheet('explosion1', '/assets/explosion1.png', { frameWidth: 64, frameHeight: 64 });
-    this.load.spritesheet('explosion2', '/assets/explosion2.png', { frameWidth: 866 / 6, frameHeight: 288 });
+    this.load.spritesheet('explosion1', './assets/explosion1.png', { frameWidth: 64, frameHeight: 64 });
+    this.load.spritesheet('explosion2', './assets/explosion2.png', { frameWidth: 866 / 6, frameHeight: 288 });
 }
 function create() {
     this.entidades = {};
