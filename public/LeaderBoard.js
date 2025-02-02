@@ -32,7 +32,7 @@ class LeaderScene extends Phaser.Scene {
         
         // Iterar sobre los jugadores y mostrar sus nombres y puntuaciones
         myData.forEach(player => {
-            this.add.text(config.width / 2, yPosition, `${player.usuario}: ${player.puntuacion}`, {
+            this.add.text(config.width / 3, yPosition, `${player.usuario}: ${player.puntuacion}`, {
                 font: '28px Arial', fill: '#fff'
             }).setOrigin(0, 0.5);
             yPosition += 40; // Mover hacia abajo para el siguiente jugador
