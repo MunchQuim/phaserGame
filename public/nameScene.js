@@ -57,10 +57,13 @@ class NameScene extends Phaser.Scene {
         data.append("player", this.nick);
         data.append("score", score);
 
+        const token = '';// recoger de .env
+
         fetch(url, {
             method: "POST",
             headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Authorization": `Bearer ${token}`
             },
             body: data.toString()
         })
@@ -68,7 +71,6 @@ class NameScene extends Phaser.Scene {
             .then(async (result) => {
                 if (result.success) {
                     /* console.log("Puntuación guardada con éxito."); */
-                    // Aquí podrías cambiar a otra escena, por ejemplo:
                     const data = await cargarDatos();
                     myData = data;
                     this.scene.start('LeaderScene');

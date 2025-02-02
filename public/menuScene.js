@@ -24,7 +24,7 @@ class MenuScene extends Phaser.Scene {
         startButton.on('pointerout', () => {
             startButton.setStyle({ fill: '#fff' });
         });
-        const leaderButton = this.add.text(config.width/2, 350, 'Leaderboards', { font: '24px Arial', fill: '#fff' }).setOrigin(0.5,0.5).setInteractive();
+        const leaderButton = this.add.text(config.width/2, 350, 'Leaderboard', { font: '24px Arial', fill: '#fff' }).setOrigin(0.5,0.5).setInteractive();
         leaderButton.on('pointerover', () => {
             leaderButton.setStyle({ fill: '#FDA50F'});
         });
