@@ -261,9 +261,9 @@ function actualizarPersonaje(escena) {
                 }, 1000 / player.dps);
             }
         }
-                if (escena.keys.hurt.isDown && !player.invencible) {
-                    jugadorDaño(escena);
-                }
+        /* if (escena.keys.hurt.isDown && !player.invencible) {
+            jugadorDaño(escena);
+        } */
     }
 
 }
@@ -370,7 +370,7 @@ function gameOver(escena) {
 
     escena.time.addEvent({
         delay: 2000,
-        callback: ()=>{
+        callback: () => {
             escena.scene.start('NameScene');
         },
         callbackScope: this,
