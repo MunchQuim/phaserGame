@@ -34,7 +34,7 @@ class LeaderScene extends Phaser.Scene {
         myData.forEach(player => {
             this.add.text(config.width / 2, yPosition, `${player.usuario}: ${player.puntuacion}`, {
                 font: '28px Arial', fill: '#fff'
-            }).setOrigin(0.5, 0.5);
+            }).setOrigin(0, 0.5);
             yPosition += 40; // Mover hacia abajo para el siguiente jugador
         });
     }

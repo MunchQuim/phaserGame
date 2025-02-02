@@ -22,7 +22,7 @@ class ZigZagEnemy extends Phaser.Physics.Arcade.Sprite {
         if ((this.x <= 32 && this.direction == -1) || (this.x >= config.width - 32 && this.direction == 1)) {
             this.direction *= -1; // Cambiar de dirección si llega a los bordes
         }
-        console.log(this.scene.time.now > this.lastFired + this.fireCooldown);
+        /* console.log(this.scene.time.now > this.lastFired + this.fireCooldown); */
         if (this.scene.time.now > this.lastFired + this.fireCooldown) {
             this.lastFired = this.scene.time.now; // Actualizar el tiempo
 
